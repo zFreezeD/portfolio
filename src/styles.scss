@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-base: #000000;
+    --color-primary: #ff003b;
+    --color-primary2: #181823;
+    --font-size-head2: 28pt;
+    --font-size-head3: 18pt;
+    --font-size-flowtext: 13pt;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+}
+
+body {
+    margin: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--color-base);
+    color: white;
+    font-family: "Sen", sans-serif;
+    box-sizing: border-box;
+}

@@ -1,0 +1,111 @@
+.main {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-flow: column;
+    max-width: 100%;
+    padding-bottom: 72px;
+
+    form {
+        z-index: 2;
+        display: flex;
+        flex-flow: column;
+        width: 30vw;
+        color: white;
+    }
+
+    h2 {
+        font-size: var(--font-size-head2);
+        margin: 0;
+    }
+
+    p {
+        font-size: var(--font-size-flowtext);
+        margin-top: 5px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    a{
+        color: var(--color-primary);
+    }
+
+    label {
+        font-size: var(--font-size-flowtext);
+    }
+}
+
+.main-input {
+    z-index: 2;
+    background-color: rgba(27, 27, 27, 0.5);
+    color: white;
+    border: none;
+    height: 30px;
+    font-size: var(--font-size-flowtext);
+}
+
+.main-textarea {
+    z-index: 2;
+    background-color: rgba(27, 27, 27, 0.5);
+    border: none;
+    min-height: 150px;
+    max-height: 300px;
+    color: white;
+    font-size: var(--font-size-flowtext);
+    resize: vertical;
+}
+
+.main-submit-container{
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrapper {
+    position: static;
+
+    top: 50%;
+    left: 50%;
+
+    button {
+        display: block;
+        width: 200px;
+        height: 50px;
+        line-height: 40px;
+        font-size: var(--font-size-flowtext);
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+        border: 2px solid var(--color-primary);
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all 0.35s;
+        cursor: pointer;
+    }
+
+    button span {
+        position: relative;
+        z-index: 2;
+    }
+
+    button:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--color-primary);
+        transition: all 0.35s;
+    }
+
+    button:hover {
+        color: #fff;
+    }
+
+    button:hover:after {
+        width: 100%;
+    }
+}
