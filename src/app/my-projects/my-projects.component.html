@@ -5,73 +5,77 @@
 
     <div class="main-btn-container">
         <div class="wrapper-active">
-            <button><span>Angular</span></button>
+            <button (click)="OnClick('All')"><span>All</span></button>
         </div>
         <div class="wrapper">
-            <button><span>Angular</span></button>
+            <button (click)="OnClick('Angular')"><span>Angular</span></button>
         </div>
         <div class="wrapper">
-            <button><span>JavaScript</span></button>
+            <button (click)="OnClick('JavaScript')"><span>JavaScript</span></button>
+        </div>
+
+        <div class="wrapper">
+            <button (click)="OnClick('Unity')"><span>C# / Unity</span></button>
         </div>
     </div>
-    <div class="grid">
+    <div id="grid" class="grid">
 
-        <div class="grid-object">
-            <div class="grid-container-active">
-                <h3>Beispiel Seite</h3>
-                <p>This example makes use of examples.</p>
+        <div id="project-1" *ngIf="All || JavaScript"  class="grid-object" >
+            <div class="grid-container">
+                <h3>Pokedex</h3>
+                <p>A Pokedex with API-Usage</p>
                 <div class="wrapper">
-                    <button><span>JavaScript</span></button>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>
 
-        <div class="grid-object">
-            <div class="grid-container-unactive">
-                <h3>Beispiel Seite</h3>
-                <p>This example makes use of examples.</p>
+        <div *ngIf="All || Angular"  (mouseout)='exit()' class="grid-object">
+            <div class="grid-container">
+                <h3>This Portfolio</h3>
+                <p>This Portfolio is created with Angular</p>
                 <div class="wrapper">
-                    <button><span>JavaScript</span></button>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>
 
-        <div class="grid-object">
-            <div class="grid-container-unactive">
+        <div *ngIf="All || JavaScript"  (mouseout)='exit()' class="grid-object">
+            <div class="grid-container">
                 <h3>Beispiel Seite</h3>
                 <p>This example makes use of examples.</p>
                 <div class="wrapper">
-                    <button><span>JavaScript</span></button>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>
 
-        <div class="grid-object">
-            <div class="grid-container-unactive">
-                <h3>Beispiel Seite</h3>
-                <p>This example makes use of examples.</p>
+        <div *ngIf="All || Unity"  (mouseout)='exit()' class="grid-object">
+            <div class="grid-container">
+                <h3>Hotel Game</h3>
+                <p>Currently i'm creating a hotel game in Unity</p>
                 <div class="wrapper">
-                    <button><span>JavaScript</span></button>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>
 
-        <div class="grid-object">
-            <div class="grid-container-unactive">
-                <h3>Beispiel Seite</h3>
-                <p>This example makes use of examples.</p>
+        <div *ngIf="All || Angular"  (mouseout)='exit()' class="grid-object">
+            <div class="grid-container">
+                <h3>Ring of Fire</h3>
+                <p>A drinking game i created with Angular</p>
                 <div class="wrapper">
-                    <a href="#"><span>Hover Me!</span></a>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>
 
-        <div class="grid-object">
-            <div class="grid-container-unactive">
-                <h3>Beispiel Seite</h3>
-                <p>This example makes use of examples.</p>
+        <div *ngIf="All || JavaScript"  (mouseout)='exit()' class="grid-object">
+            <div class="grid-container">
+                <h3>Chicken Revenge</h3>
+                <p>A JavaScript game i created with JavaScript</p>
                 <div class="wrapper">
-                    <a href="#"><span>Hover Me!</span></a>
+                    <button><span>Open</span></button>
                 </div>
             </div>
         </div>

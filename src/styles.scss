@@ -2,12 +2,12 @@
     --color-base: #000000;
     --color-primary: #ff003b;
     --color-primary2: #181823;
-    --font-size-head2: 28pt;
-    --font-size-head3: 18pt;
-    --font-size-flowtext: 13pt;
+    --font-size-head2: 1.3em;
+    --font-size-head3: 1em;
+    --font-size-flowtext: 0.6em;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
 }
@@ -21,3 +21,22 @@ body {
     font-family: "Sen", sans-serif;
     box-sizing: border-box;
 }
+
+@media (max-width: 2000px) {
+    :root {
+        --font-size-head2: 1em;
+        --font-size-head3: 0.8em;
+        --font-size-flowtext: 0.6em;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --font-size-head2: 0.8em;
+        --font-size-head3: 0.6em;
+        --font-size-flowtext: 0.6em;
+    }
+}
+
+
+

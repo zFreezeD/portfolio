@@ -68,7 +68,9 @@
     left: 50%;
 
     button {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 200px;
         height: 50px;
         line-height: 40px;
@@ -108,4 +110,39 @@
     button:hover:after {
         width: 100%;
     }
+}
+
+
+
+@media (max-width: 1000px) {
+    .main{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+
+
+        form {
+            z-index: 2;
+            display: flex;
+            flex-flow: column;
+            width: 85%;
+            color: white;
+        }
+    }
+
+    .main-submit-container{
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper {
+        margin-bottom: 0px;
+    
+        button {
+            width: 100px;
+            height: 30px;
+        }
+    }
+
 }

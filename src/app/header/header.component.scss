@@ -20,7 +20,7 @@ header{
     display: flex;
     a{
         color: rgba(255, 255, 255, 0.8);
-        font-size: 18px;
+        font-size: var(--font-size-flowtext);
         text-decoration: none;
         
 
@@ -40,5 +40,17 @@ header{
     &:hover{
         background-color: var(--color-primary);
         
+    }
+}
+
+@media (max-width: 1000px) {
+    header{
+        position: inherit;
+        height: 10vh;
+        padding-left: 20px;
+    }
+
+    .header-links{
+        display: none;
     }
 }

@@ -1,6 +1,9 @@
 .main {
     display: flex;
     height: 250px;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
     padding-left: 72px;
     padding-right: 72px;
     padding-bottom: 25px;
@@ -29,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15vw;
+    width: 15%;
     img {
         height: 200px;
         width: 200px;
@@ -37,24 +40,26 @@
 }
 
 .main-container {
-    width: 70vw;
+    width: 70%;
     display: grid;
     grid-template-areas: '. . .';
+    grid-template-columns: 33.33%;
     height: 100%;
 }
 
 .main-container-group {
     display: flex;
     justify-content: space-evenly;
-    width: 23.33vw;
     align-items: center;
     flex-flow: column;
 
     h4 {
+        font-size: var(--font-size-flowtext);
         margin: 0;
     }
 
     p {
+        font-size: var(--font-size-flowtext);
         margin: 0;
         margin-left: 0px;
     }
@@ -63,7 +68,7 @@
         margin: 0;
         color: var(--color-primary);
         text-decoration: none;
-
+        font-size: var(--font-size-flowtext);
         &:hover{
             text-decoration: underline;
         }
@@ -88,7 +93,7 @@
     display: flex;
     flex-flow: column;
     justify-content: space-around;
-    width: 15vw;
+    width: 15%;
 
     img{
         height: 35px;
@@ -98,4 +103,60 @@
 
 }
 
+
+@media (max-width: 1000px) {
+
+    .main{
+        padding-left: 20px;
+        padding-right: 20px;
+        height: auto;
+        flex-flow: column;
+    }
+
+    .main-container {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-areas: '.';
+        grid-template-columns: 100%;
+        gap: 15px 0;
+    }
+
+    .main-container-group{
+        height: 80px;
+
+        h4{
+            margin-bottom: 10px;
+        }
+
+        img{
+            height: 15px;
+            width: 15px;
+        }
+    }
+    
+    .footer-logo {
+        width: 100%;
+        padding-bottom: 20px;
+        img {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .main-icon-container{
+        flex-flow: row;
+        justify-content: space-around;
+        width: 100%;
+        height: fit-content;
+    
+        img{
+            height: 25px;
+            width: 25px;
+            cursor: pointer;
+        }
+    
+    }
+
+}
 

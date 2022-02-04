@@ -63,3 +63,17 @@
     font-size: var(--font-size-flowtext);
     margin: 0;
 }
+
+
+@media (max-width: 1000px) {
+
+    .main{
+        height: auto;
+        flex-flow: column;
+    }
+
+    .main-bottom-container {
+        max-width: 100%;
+    }
+
+}
