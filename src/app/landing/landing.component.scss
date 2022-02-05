@@ -45,7 +45,7 @@
     margin-right: 72px;
     margin-left: 12%;
     height: 100%;
-    padding-top: 25%;
+    padding-top: 30vh;
 }
 
 .right-headtext {
@@ -58,7 +58,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     header{
         display: none;
     }
@@ -68,6 +68,7 @@
         img{
             height: 100%;
             width: 100%;
+            object-position: top;
         }
     }
 
@@ -88,6 +89,9 @@
 
     .main-right-container{
         padding: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0;
     }
 
     .right-bg{

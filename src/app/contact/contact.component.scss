@@ -71,8 +71,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 200px;
-        height: 50px;
+        width: var(--button-width);
+        height: var(--button-height);
         line-height: 40px;
         font-size: var(--font-size-flowtext);
         font-family: sans-serif;
