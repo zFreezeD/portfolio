@@ -83,7 +83,24 @@
     }
 }
 
-@media (max-width: 1200px), (max-height: 950px) {
+@media (max-height: 1200px){
+    .main-container-object-head {
+        height: 80px;
+        width: 80px;
+
+        img {
+            width: 35px;
+        }
+    }
+
+    .main-container-object-body {
+        height: 180px;
+        width: 330px;
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 1200px), (max-height: 900px){
     .main {
         height: fit-content;
         padding-bottom: 20px;

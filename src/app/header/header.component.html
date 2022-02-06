@@ -1,18 +1,41 @@
 <header>
-    <img src="assets/img/Freeze.png">
+    <img class="header-logo" src="assets/img/Freeze.png">
 
     <div class="header-links">
         <div class="header-links-container">
-            <a href="#">Experience</a>
+            <a href="#work-experience">Work Experience</a>
         </div>
         <div class="header-links-container">
-            <a href="#">Work</a>
+            <a href="#about-me">About Me</a>
         </div>
         <div class="header-links-container">
-            <a href="#">Technologies</a>
+            <a href="#skillset">My Skills</a>
         </div>
         <div class="header-links-container">
-            <a href="#">Contact</a>
+            <a href="#my-projects">My Projecs</a>
+        </div>
+        <div class="header-links-container">
+            <a href="#contact">Contact</a>
         </div>
     </div>
+
+    
 </header>
+
+<div class="mobile-header">
+    <div (click)="changeMenu()"   [class.active]="classActive" class="navT">
+      <div [class.active]="classActive" class="icon"></div>
+    </div>
+    
+    <div [class.open]="classActive" id="menu">
+      <ul>
+        <li><a (click)="changeMenu()" href="#landing">Home</a></li>
+        <li><a (click)="changeMenu()" href="#work-experience">Work Experience</a></li>
+        <li><a (click)="changeMenu()" href="#about-me">About me</a></li>
+        <li><a (click)="changeMenu()" href="#skillset">My Skills</a></li>
+        <li><a (click)="changeMenu()" href="#my-projects">My Projects</a></li>
+        <li><a (click)="changeMenu()" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  
+  </div>
