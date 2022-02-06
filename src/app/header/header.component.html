@@ -2,21 +2,21 @@
     <img class="header-logo" src="assets/img/Freeze.png">
 
     <div class="header-links">
-        <div class="header-links-container">
-            <a href="#work-experience">Work Experience</a>
-        </div>
-        <div class="header-links-container">
-            <a href="#about-me">About Me</a>
-        </div>
-        <div class="header-links-container">
-            <a href="#skillset">My Skills</a>
-        </div>
-        <div class="header-links-container">
-            <a href="#my-projects">My Projecs</a>
-        </div>
-        <div class="header-links-container">
-            <a href="#contact">Contact</a>
-        </div>
+        <a href="#work-experience"  class="header-links-container">
+            Work Experience
+        </a>
+        <a href="#about-me" class="header-links-container">
+            About Me
+        </a>
+        <a href="#skillset" class="header-links-container">
+            My Skills
+        </a>
+        <a href="#my-projects" class="header-links-container">
+            My Projects
+        </a>
+        <a href="#contact" class="header-links-container">
+            Contact
+        </a>
     </div>
 
     
@@ -29,12 +29,12 @@
     
     <div [class.open]="classActive" id="menu">
       <ul>
-        <li><a (click)="changeMenu()" href="#landing">Home</a></li>
-        <li><a (click)="changeMenu()" href="#work-experience">Work Experience</a></li>
-        <li><a (click)="changeMenu()" href="#about-me">About me</a></li>
-        <li><a (click)="changeMenu()" href="#skillset">My Skills</a></li>
-        <li><a (click)="changeMenu()" href="#my-projects">My Projects</a></li>
-        <li><a (click)="changeMenu()" href="#contact">Contact</a></li>
+        <a (click)="changeMenu()" href="#landing">Home</a>
+        <a (click)="changeMenu()" href="#work-experience">Work Experience</a>
+        <a (click)="changeMenu()" href="#about-me">About me</a>
+        <a (click)="changeMenu()" href="#skillset">My Skills</a>
+        <a (click)="changeMenu()" href="#my-projects">My Projects</a>
+        <a (click)="changeMenu()" href="#contact">Contact</a>
       </ul>
     </div>
   

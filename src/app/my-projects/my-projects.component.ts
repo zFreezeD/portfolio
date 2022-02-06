@@ -39,13 +39,18 @@ export class MyProjectsComponent implements OnInit {
   JavaScript = true;
   Unity = true;
 
+
+  btn1Active = true;
+  btn2Active = false;
+  btn3Active = false;
+  btn4Active = false;
   //grid : any;
 
   ngOnInit(): void {
     //this.grid = document.querySelector("#grid");
   }
 
-  over(int : number) {
+  over(int: number) {
     console.log(`project-${int}`)
     console.log(document.querySelector("project1"));
   }
@@ -55,7 +60,7 @@ export class MyProjectsComponent implements OnInit {
   }
 
 
-  OnClick(name: string) {
+  OnClick(name: string, int: number) {
 
     console.log(name);
 
@@ -80,5 +85,20 @@ export class MyProjectsComponent implements OnInit {
       this.JavaScript = false;
       this.Unity = true;
     }
+
+
+    this.btn1Active = false,
+      this.btn2Active = false;
+    this.btn3Active = false;
+    this.btn4Active = false;
+
+    if (int == 1)
+      this.btn1Active = true;
+    else if (int == 2)
+      this.btn2Active = true;
+    else if (int == 3)
+      this.btn3Active = true;
+    else if (int == 4)
+      this.btn4Active = true;
   }
 }

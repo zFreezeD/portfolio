@@ -11,6 +11,7 @@
         margin: 0;
         margin-top: 15px;
         margin-bottom: 5px;
+        text-align: center;
     }
 }
 
@@ -21,6 +22,7 @@
     h2 {
         margin: 0;
         font-size: var(--font-size-head2);
+        
     }
 }
 
@@ -65,11 +67,21 @@
 }
 
 
+@media screen and (max-height: 820px){
+    .main{
+        height: fit-content !important;
+        max-height: fit-content !important;
+    }
+}
+
+
 @media (max-width: 1000px) {
 
     .main{
         height: auto;
         flex-flow: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .main-bottom{

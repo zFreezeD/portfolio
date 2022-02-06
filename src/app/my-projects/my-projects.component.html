@@ -4,18 +4,18 @@
     <h3>Work that I've done for the past 8 years</h3>
 
     <div class="main-btn-container">
-        <div class="wrapper-active">
-            <button (click)="OnClick('All')"><span>All</span></button>
+        <div [class.active]="btn1Active" class="wrapper">
+            <button (click)="OnClick('All',1)"><span>All</span></button>
         </div>
-        <div class="wrapper">
-            <button (click)="OnClick('Angular')"><span>Angular</span></button>
+        <div [class.active]="btn2Active" class="wrapper">
+            <button (click)="OnClick('Angular',2)"><span>Angular</span></button>
         </div>
-        <div class="wrapper">
-            <button (click)="OnClick('JavaScript')"><span>JavaScript</span></button>
+        <div [class.active]="btn3Active" class="wrapper">
+            <button (click)="OnClick('JavaScript',3)"><span>JavaScript</span></button>
         </div>
 
-        <div class="wrapper">
-            <button (click)="OnClick('Unity')"><span>C# / Unity</span></button>
+        <div [class.active]="btn4Active" class="wrapper">
+            <button (click)="OnClick('Unity',4)"><span>C# / Unity</span></button>
         </div>
     </div>
     <div id="grid" class="grid">

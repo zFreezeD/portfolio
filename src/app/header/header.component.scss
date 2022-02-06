@@ -137,19 +137,18 @@ header {
         flex-flow: column;
         list-style: none;
     }
-    & li:first-child {
+    & a:first-child {
         margin-top: 0;
     }
-    & li {
+    & a {
         padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 15%;
+        height: 12%;
         transition: all 0.2s;
         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
         color: white;
-
         &:hover {
             background-color: rgba(0, 0, 0, 0.2);
         }
@@ -162,7 +161,7 @@ header {
         cursor: pointer;
     }
     & a:hover {
-        letter-spacing: 0.5em;
+        letter-spacing: 0.2em;
         text-decoration: underline;
     }
     &.open {

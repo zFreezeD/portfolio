@@ -35,10 +35,8 @@
 
 .wrapper {
     position: static;
-
     top: 50%;
     left: 50%;
-
     button {
         display: flex;
         justify-content: center;
@@ -82,37 +80,11 @@
     button:hover:after {
         width: 100%;
     }
-}
 
-.wrapper-active {
-    position: static;
-
-    top: 50%;
-    left: 50%;
-
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: var(--button-width);
-        height: var(--button-height);
-        line-height: 40px;
-        font-size: var(--font-size-flowtext);
-        font-family: sans-serif;
-        text-decoration: none;
-        color: white;
-        background-color: var(--color-primary);
-        border: 2px solid var(--color-primary);
-        letter-spacing: 2px;
-        text-align: center;
-        position: relative;
-        transition: all 0.35s;
-        cursor: pointer;
-    }
-
-    button span {
-        position: relative;
-        z-index: 2;
+    &.active {
+        button {
+            background-color: var(--color-primary);
+        }
     }
 }
 
@@ -136,33 +108,32 @@
     &:hover {
         border: 2px solid var(--color-primary);
 
-        :first-child{
+        :first-child {
             display: flex !important;
+        }
+    }
+
+    .grid-container {
+        display: none;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+
+        box-shadow: inset 0 0 0 1000px rgba(58, 57, 57, 0.6);
+
+        h3 {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 45px;
+        }
     }
 }
-
-.grid-container {
-    display: none;
-            flex-flow: column;
-            align-items: center;
-            justify-content: center;
-    
-            height: 100%;
-    
-            box-shadow: inset 0 0 0 1000px rgba(58, 57, 57, 0.6);
-    
-            h3 {
-                margin: 0;
-                margin-bottom: 15px;
-            }
-    
-            p {
-                margin: 0;
-                margin-bottom: 45px;
-            }
-        }
-}
-
 
 .grid-container-flowtext {
     font-size: var(--font-size-flowtext);
@@ -174,11 +145,7 @@
     display: none;
 }
 
-
 @media (max-width: 1800px) {
-
-
-
     .grid {
         grid-template-areas: ". . .";
         gap: 10px 25px;
@@ -188,15 +155,9 @@
         height: 450px;
         width: 450px;
     }
-
-
-
 }
 
 @media (max-width: 1440px) {
-
-
-
     .grid {
         gap: 10px 25px;
     }
@@ -205,14 +166,9 @@
         height: 380px;
         width: 380px;
     }
-
-
-
 }
 
 @media (max-width: 1210px) {
-
-
     .main-btn-container {
         position: relative;
         display: grid;
@@ -228,13 +184,9 @@
         height: 300px;
         width: 300px;
     }
-
-
-
 }
 
 @media (max-height: 1390px) {
-
     .grid {
         gap: 10px 25px;
     }
@@ -243,11 +195,9 @@
         height: 500px;
         width: 500px;
     }
-
 }
 
 @media (max-height: 1250px) {
-
     .grid {
         gap: 10px 25px;
     }
@@ -256,20 +206,16 @@
         height: 400px;
         width: 400px;
     }
-
 }
 
 @media (max-height: 1040px) {
-
     .grid-object {
         height: 300px;
         width: 300px;
     }
-
 }
 
 @media (max-width: 980px) {
-
     .grid {
         grid-template-areas: ". .";
         gap: 10px 25px;
@@ -279,27 +225,17 @@
         height: 350px;
         width: 350px;
     }
-
-
-
 }
 
 @media (max-width: 760px) {
-
-
-
     .grid-object {
         height: 265px;
         width: 265px;
     }
-
-
-
 }
 
 @media (max-width: 600px) {
-
-    .main{
+    .main {
         height: fit-content;
         padding-bottom: 20px;
         padding-top: 20px;
@@ -321,14 +257,10 @@
         height: 400px;
         width: 400px;
     }
-
-
-
 }
 
 @media (max-width: 420px) {
-
-    .main{
+    .main {
         height: fit-content;
         padding-bottom: 20px;
         padding-top: 20px;
@@ -344,18 +276,11 @@
         height: 300px;
         width: 300px;
     }
-
-
-
 }
 
 @media (max-width: 320px) {
-
     .grid-object {
         height: 200px;
         width: 200px;
     }
-
-
-
 }

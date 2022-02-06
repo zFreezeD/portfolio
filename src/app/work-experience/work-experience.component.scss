@@ -68,6 +68,14 @@
    white-space: nowrap; 
 }
 
+@media screen and (max-height: 1100px){
+    .main{
+        height: fit-content !important;
+        max-height: fit-content !important;
+        padding-bottom: 20px;
+    }
+}
+
 @media (max-width: 1430px) {
 
     .bot-container-headtext{
@@ -83,6 +91,8 @@
 
     .main{
         height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .main-top-container{
