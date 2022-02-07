@@ -12,6 +12,7 @@ import { MyProjectsComponent } from './my-projects/my-projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillrotationComponent } from './skillrotation/skillrotation.component';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { SkillrotationComponent } from './skillrotation/skillrotation.component'
     ContactComponent,
     FooterComponent,
     SkillrotationComponent,
+    DataProtectionComponent,
   ],
   imports: [
     BrowserModule,

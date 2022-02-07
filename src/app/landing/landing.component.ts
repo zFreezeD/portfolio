@@ -22,7 +22,6 @@ export class LandingComponent implements OnInit {
     "Game Programmer",
     "Unity Programmer",
     "Designer",
-    "Not the woman",
     "Gamer",
     "Friend",
     "Dreamer",
