@@ -18,7 +18,10 @@
         width: 130.89%;
         height: 70%;
     }
+    animation: slideFromLeft .5s ease-in-out;
 }
+
+
 
 .main-left-container {
     padding-top: 144px;
@@ -39,6 +42,7 @@
     width: 61.8vw;
     height: 100%;
     box-sizing: border-box;
+    animation: slideFromRight .5s ease-in-out;
 }
 
 .main-right-container {
@@ -58,31 +62,30 @@
     font-size: var(--font-size-flowtext);
 }
 
-
 @media screen and (max-width: 1025px) {
-    header{
+    header {
         display: none;
     }
-    .main{
+    .main {
         flex-flow: column;
         height: 93vh;
-        img{
+        img {
             height: 100%;
             width: 100%;
             object-position: top;
         }
     }
 
-    .main-left{
+    .main-left {
         width: 100vw;
         height: 50vh;
     }
 
-    .main-left-container{
+    .main-left-container {
         padding-top: 0;
     }
 
-    .main-right{
+    .main-right {
         width: 100vw;
         height: 50vh;
         max-height: 100%;
@@ -90,26 +93,45 @@
         padding-bottom: 20px;
         padding-top: 20px;
 
-        h1{
+        h1 {
             margin: 0;
         }
 
-        p{
+        p {
             margin: 0;
         }
     }
 
-    .main-right-container{
+    .main-right-container {
         padding: 0;
         padding-right: 20px;
         padding-left: 20px;
         margin: 0;
     }
 
-    .right-bg{
+    .right-bg {
         display: none;
     }
-
-
 }
 
+@keyframes slideFromLeft {
+    from {
+        transform: translate(-485px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translate(+485px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}

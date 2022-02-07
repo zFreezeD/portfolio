@@ -102,6 +102,7 @@
 .grid-object {
     background-image: url("/assets/img/prototype.png");
     background-size: cover;
+    background-position: center;
     height: 550px;
     width: 550px;
     border: 2px solid black;
@@ -187,6 +188,7 @@
 }
 
 @media (max-height: 1390px) {
+    
     .grid {
         gap: 10px 25px;
     }
@@ -208,7 +210,8 @@
     }
 }
 
-@media (max-height: 1040px) {
+@media (max-height: 1020px) {
+
     .grid-object {
         height: 300px;
         width: 300px;

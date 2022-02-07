@@ -1,9 +1,9 @@
-<div id="my-projects" class="main">
+<div id="my-projects" class="main" data-aos="fade-up" data-aos-duration="750">
 
     <h2>My Projects</h2>
     <h3>Work that I've done for the past 8 years</h3>
 
-    <div class="main-btn-container">
+    <div class="main-btn-container" data-aos="fade-up" data-aos-duration="1750">
         <div [class.active]="btn1Active" class="wrapper">
             <button (click)="OnClick('All',1)"><span>All</span></button>
         </div>
@@ -18,9 +18,9 @@
             <button (click)="OnClick('Unity',4)"><span>C# / Unity</span></button>
         </div>
     </div>
-    <div id="grid" class="grid">
+    <div id="grid" class="grid" data-aos="fade-up" data-aos-duration="2500">
 
-        <div id="project-1" *ngIf="All || JavaScript"  class="grid-object" >
+        <div [style.background-image]="'url(/assets/img/project/Pokemon.png)'" id="project-1" *ngIf="All || JavaScript"  class="grid-object" >
             <div class="grid-container">
                 <h3>Pokedex</h3>
                 <p>A Pokedex with API-Usage</p>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div *ngIf="All || Angular"  (mouseout)='exit()' class="grid-object">
+        <div [style.background-image]="'url(/assets/img/project/myWebsite.png)'" *ngIf="All || Angular"  (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>This Portfolio</h3>
                 <p>This Portfolio is created with Angular</p>
@@ -50,10 +50,10 @@
             </div>
         </div>
 
-        <div *ngIf="All || Unity"  (mouseout)='exit()' class="grid-object">
+        <div [style.background-image]="'url(/assets/img/project/HotelGame.png)'" *ngIf="All || Unity"  (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Hotel Game</h3>
-                <p>Currently i'm creating a hotel game in Unity</p>
+                <p>Currently i'm creating a first-person hotel game in Unity</p>
                 <div class="wrapper">
                     <button><span>Open</span></button>
                 </div>
@@ -70,10 +70,10 @@
             </div>
         </div>
 
-        <div *ngIf="All || JavaScript"  (mouseout)='exit()' class="grid-object">
+        <div [style.background-image]="'url(/assets/img/project/ChickenRevenge.png)'" *ngIf="All || JavaScript"  (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Chicken Revenge</h3>
-                <p>A JavaScript game i created with JavaScript</p>
+                <p>A JavaScript game i created</p>
                 <div class="wrapper">
                     <button><span>Open</span></button>
                 </div>

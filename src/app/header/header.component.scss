@@ -13,6 +13,7 @@ header {
     img {
         height: 80px;
     }
+    animation: slideFromTop 1s ease-in-out;
 }
 
 .header-links {
@@ -276,4 +277,16 @@ p {
     }
 
     
+}
+
+
+@keyframes slideFromTop {
+    from {
+        transform: translateY(-285px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0px);
+        opacity: 1;
+    }
 }

@@ -67,8 +67,9 @@
 }
 
 
-@media screen and (max-height: 820px){
+@media screen and (max-height: 760px){
     .main{
+        min-height: 300px;
         height: fit-content !important;
         max-height: fit-content !important;
     }
