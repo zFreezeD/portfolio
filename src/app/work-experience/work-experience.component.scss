@@ -1,6 +1,12 @@
+#work-experience{
+    display: flex;
+    align-items: center;
+}
+
 .main{
     scroll-snap-align: start;
     display: flex;
+    align-items: center;
     flex-flow: column;
     height: 33.33vh;
     width: 100vw;
