@@ -1,5 +1,6 @@
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormGroupDirective } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-projects',
@@ -8,7 +9,7 @@ import { FormGroupDirective } from '@angular/forms';
 })
 export class MyProjectsComponent implements OnInit {
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
@@ -117,5 +118,9 @@ export class MyProjectsComponent implements OnInit {
       this.btn4Active = true;
       else if (int == 5)
       this.btn5Active = true;
+  }
+
+  openWebsite(){
+    this.router.navigateByUrl('/linked/pokemon/index.html');
   }
 }
