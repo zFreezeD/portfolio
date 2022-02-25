@@ -12,4 +12,9 @@ export class AboutMeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  wip(){
+    alert("work in progress. Images or Links could not be working. Fixed soon!")
+  }
+
 }

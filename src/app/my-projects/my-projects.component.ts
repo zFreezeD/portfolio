@@ -120,7 +120,7 @@ export class MyProjectsComponent implements OnInit {
       this.btn5Active = true;
   }
 
-  openWebsite(){
-    this.router.navigateByUrl('/linked/pokemon/index.html');
+  wip(){
+    alert("work in progress. Images or Links could not be working. Fixed soon!")
   }
 }
