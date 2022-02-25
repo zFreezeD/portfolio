@@ -90,7 +90,7 @@ export class MyProjectsComponent implements OnInit {
     else if (name == "Firebase") {
       this.All = false;
       this.Angular = false;
-      this.JavaScript = true;
+      this.JavaScript = false;
       this.Unity = false;
       this.Firebase = true;
     } else if (name == "Unity") {
@@ -102,8 +102,8 @@ export class MyProjectsComponent implements OnInit {
     }
 
 
-    this.btn1Active = false,
-      this.btn2Active = false;
+    this.btn1Active = false;
+    this.btn2Active = false;
     this.btn3Active = false;
     this.btn4Active = false;
     this.btn5Active = false;
@@ -116,11 +116,11 @@ export class MyProjectsComponent implements OnInit {
       this.btn3Active = true;
     else if (int == 4)
       this.btn4Active = true;
-      else if (int == 5)
+    else if (int == 5)
       this.btn5Active = true;
   }
 
-  wip(){
+  wip() {
     alert("work in progress. Images or Links could not be working. Fixed soon!")
   }
 }
