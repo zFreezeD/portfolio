@@ -35,15 +35,18 @@ export class MyProjectsComponent implements OnInit {
 
 
   All = true;
-  Angular = true;
-  JavaScript = true;
-  Unity = true;
+  Angular = false;
+  JavaScript = false;
+  Unity = false;
+  Firebase = false;
+
 
 
   btn1Active = true;
   btn2Active = false;
   btn3Active = false;
   btn4Active = false;
+  btn5Active = false;
   //grid : any;
 
   ngOnInit(): void {
@@ -69,21 +72,32 @@ export class MyProjectsComponent implements OnInit {
       this.Angular = false;
       this.JavaScript = false;
       this.Unity = false;
+      this.Firebase = false;
     } else if (name == "Angular") {
       this.All = false;
       this.Angular = true;
       this.JavaScript = false;
       this.Unity = false;
+      this.Firebase = false;
     } else if (name == "JavaScript") {
       this.All = false;
       this.Angular = false;
       this.JavaScript = true;
       this.Unity = false;
+      this.Firebase = false;
+    }
+    else if (name == "Firebase") {
+      this.All = false;
+      this.Angular = false;
+      this.JavaScript = true;
+      this.Unity = false;
+      this.Firebase = true;
     } else if (name == "Unity") {
       this.All = false;
       this.Angular = false;
       this.JavaScript = false;
       this.Unity = true;
+      this.Firebase = false;
     }
 
 
@@ -91,6 +105,7 @@ export class MyProjectsComponent implements OnInit {
       this.btn2Active = false;
     this.btn3Active = false;
     this.btn4Active = false;
+    this.btn5Active = false;
 
     if (int == 1)
       this.btn1Active = true;
@@ -100,5 +115,7 @@ export class MyProjectsComponent implements OnInit {
       this.btn3Active = true;
     else if (int == 4)
       this.btn4Active = true;
+      else if (int == 5)
+      this.btn5Active = true;
   }
 }

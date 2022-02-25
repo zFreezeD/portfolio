@@ -27,14 +27,19 @@
 
 .main-btn-container {
     position: relative;
-    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-left: 72px;
+    margin-right: 72px;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-areas: ". . . .";
-    gap: 0px 50px;
     padding-bottom: 25px;
 }
 
 .wrapper {
     position: static;
+    margin: 25px;
     top: 50%;
     left: 50%;
     button {
@@ -118,6 +123,7 @@
         display: none;
         flex-flow: column;
         align-items: center;
+        text-align: center;
         justify-content: center;
 
         height: 100%;
@@ -182,13 +188,6 @@
 }
 
 @media (max-width: 1210px) {
-    .main-btn-container {
-        position: relative;
-        display: grid;
-        grid-template-areas: ". .";
-        gap: 25px 50px;
-        padding-bottom: 25px;
-    }
     .grid {
         gap: 10px 25px;
     }
@@ -244,12 +243,6 @@
         height: fit-content;
         padding-bottom: 20px;
         padding-top: 20px;
-    }
-
-    .main-btn-container {
-        grid-template-areas: ".";
-        gap: 10px;
-        padding-bottom: 15px;
     }
 
     .grid {
