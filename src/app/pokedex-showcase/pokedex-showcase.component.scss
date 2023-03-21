@@ -1,0 +1,143 @@
+a {
+    text-decoration: none;
+    :link {
+        text-decoration: none;
+    }
+    :visited {
+        text-decoration: none;
+    }
+}
+
+.showcase-container {
+    position: relative;
+    height: 400px;
+    width: 100vw;
+    img {
+        height: 400px;
+        width: 100%;
+        background-position: top;
+        background-size: cover;
+    }
+}
+
+.main-btn-container {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    margin-left: 72px;
+    margin-right: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-areas: ". . . .";
+    padding-bottom: 25px;
+}
+
+.header-container {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    h2 {
+        margin: 0;
+        font-size: var(--font-size-head2);
+        text-shadow: 3px 3px black;
+        span:hover{
+            color: var(--color-primary);
+        }
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    left: 0;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100px;
+    opacity: 100%;
+
+    p {
+        margin-top: -20px;
+        text-shadow: 2px 2px black;
+        white-space: nowrap;
+    }
+}
+
+.main-btn-container {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    margin-left: 72px;
+    margin-right: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-areas: ". . . .";
+    padding-bottom: 25px;
+}
+
+.wrapper {
+    position: static;
+    margin: 25px;
+    top: 50%;
+    left: 50%;
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--button-width);
+        height: var(--button-height);
+        line-height: 40px;
+        font-size: var(--font-size-flowtext);
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0, 0, 0);
+        border: 2px solid var(--color-primary);
+        letter-spacing: 2px;
+        text-align: center;
+        position: relative;
+        transition: all 0.35s;
+        cursor: pointer;
+    }
+
+    button span {
+        position: relative;
+        z-index: 2;
+    }
+
+    button:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--color-primary);
+        transition: all 0.35s;
+    }
+
+    button:hover {
+        color: #fff;
+    }
+
+    button:hover:after {
+        width: 100%;
+    }
+
+    &.active {
+        button {
+            background-color: var(--color-primary);
+        }
+    }
+}

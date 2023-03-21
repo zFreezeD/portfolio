@@ -1,7 +1,7 @@
 <div id="my-projects" class="main" data-aos="fade-up" data-aos-duration="750">
 
     <h2>My Projects</h2>
-    <h3>Work that I've done recently</h3>
+    <h3><span>Work that I've done recently</span></h3>
 
     <div class="main-btn-container" data-aos="fade-up" data-aos-duration="1750">
         <div [class.active]="btn1Active" class="wrapper">
@@ -24,100 +24,89 @@
     </div>
     <div id="grid" class="grid" data-aos="fade-up" data-aos-duration="2500">
 
-        <div [style.background-image]="'url(/assets/img/project/Pokemon.png)'" id="project-1" *ngIf="All || JavaScript"
+        <div [style.background-image]="'url(/assets/img/project/pokedexMockup.jpg)'" id="project-1" *ngIf="All || JavaScript"
             class="grid-object">
             <div class="grid-container">
                 <h3>Pokedex</h3>
                 <p>A Pokedex with API-Usage</p>
                 <div class="wrapper">
-                    <a href="./assets/linked/pokemon/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="./assets/linked/Pokemondex/index.html" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
         </div>
 
-        <div [style.background-image]="'url(/assets/img/project/myWebsite.png)'" *ngIf="All || Angular"
+        <div [style.background-image]="'url(/assets/img/project/hotelMockup.jpg)'" id="project-1" *ngIf="All || Unity"
+            class="grid-object">
+            <div class="grid-container">
+                <h3>Hotel Management Simulator</h3>
+                <p>Currently I'm creating a first-person hotel game in Unity.</p>
+                <div class="wrapper">
+                    <a href="https://store.steampowered.com/app/1985910/Hotel_Management_Simulator/" target="_blank"><button ><span>Open</span></button></a>
+                </div>
+            </div>
+        </div>
+
+        <div [style.background-image]="'url(/assets/img/project/portfolioMockup.jpg)'" *ngIf="All || Angular"
             (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>This Portfolio</h3>
                 <p>This Portfolio is created with Angular.</p>
                 <div class="wrapper">
-                    <a href="#"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="#"><button ><span>Open</span></button></a>
                 </div>
             </div>
         </div>
 
-        <div [style.background-image]="'url(/assets/img/project/ChickenRevenge.png)'" *ngIf="All || JavaScript"
+        <div [style.background-image]="'url(/assets/img/project/chickenMockup.jpg)'" *ngIf="All || JavaScript"
             (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Chicken Revenge</h3>
                 <p>A JavaScript game I created</p>
                 <div class="wrapper">
-                    <a href="./assets/linked/chickenrevenge/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="./assets/linked/chickenrevenge/index.html" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
         </div>
 
-        <div *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
+        <div [style.background-image]="'url(/assets/img/project/joinMockup.jpg)'" *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Project: Join</h3>
-                <p>Scum project to manage task to teams.</p>
+                <p>Scrum project to manage task to teams.</p>
                 <div class="wrapper">
-                    <a href="./assets/linked/join/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="./assets/linked/join/index.html" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
         </div>
 
-        <div [style.background-image]="'url(/assets/img/project/HotelGame.png)'" *ngIf="All || Unity"
-            (mouseout)='exit()' class="grid-object">
-            <div class="grid-container">
-                <h3>Hotel Game</h3>
-                <p>Currently I'm creating a first-person hotel game in Unity.</p>
-                <div class="wrapper">
-                    <button (click)="wip()"><span>Open</span></button>
-                </div>
-            </div>
-        </div>
-
-        <div *ngIf="All || Angular || Firebase" (mouseout)='exit()' class="grid-object">
+        <div [style.background-image]="'url(/assets/img/project/ringoffireMockup.jpg)'" *ngIf="All || Angular || Firebase" (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Ring of Fire</h3>
-                <p>A drinking game I created with Angular.</p>
+                <p>A drinking multiplayer game I created with Angular.</p>
                 <div class="wrapper">
-                    <a href="https://cardgame-js.web.app" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="https://cardgame-js.web.app" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
         </div>
 
-        <div *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
+        <!--<div *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Gallery</h3>
                 <p>A basic photo-gallery.</p>
                 <div class="wrapper">
-                    <a href="./assets/linked/gallery/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="./assets/linked/gallery/index.html" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
-        </div>
+        </div>-->
 
-        <div *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
+        <!--<div *ngIf="All || JavaScript" (mouseout)='exit()' class="grid-object">
             <div class="grid-container">
                 <h3>Tic Tac Toe</h3>
                 <p>Basic Tic Tac Toe game.</p>
                 <div class="wrapper">
-                    <a href="./assets/linked/tictactoe/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
+                    <a href="./assets/linked/tictactoe/index.html" target="_blank"><button ><span>Open</span></button></a>
                 </div>
             </div>
-        </div>
-
-        <div *ngIf="All || Angular || Firebase" (mouseout)='exit()' class="grid-object">
-            <div class="grid-container">
-                <h3>Custom Relationsship Management</h3>
-                <p>Simple CRM-System to test Firebase.</p>
-                <div class="wrapper">
-                    <a href="./assets/linked/simple-crm/index.html" target="_blank"><button (click)="wip()"><span>Open</span></button></a>
-                </div>
-            </div>
-        </div>
-
+        </div>-->
 
 
 

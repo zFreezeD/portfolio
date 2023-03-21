@@ -11,7 +11,7 @@ header {
     right: 0;
     height: 100px;
     img {
-        height: 80px;
+        height: 150px;
     }
     animation: slideFromTop 1s ease-in-out;
 }
@@ -50,11 +50,13 @@ header {
 }
 
 .navT {
+    position: absolute;
+    top: 0px;
     transition: all 0.25s;
     z-index: 111;
     cursor: pointer;
     width: 100%;
-    background: #181823;
+    background: transparent;
     height: 7vh;
 
     .icon {
@@ -64,7 +66,7 @@ header {
         height: 1px;
         right: 15px;
         top: 3.5vh;
-        background-color: white;
+        background-color: var(--color-primary);
 
         &:before,
         &:after {
@@ -72,7 +74,7 @@ header {
             width: 30px;
             height: 1px;
             left: 0;
-            background: white;
+            background: var(--color-primary);
             position: absolute;
             content: "";
         }
@@ -84,7 +86,7 @@ header {
         }
     }
     &:hover {
-        background: #181823;;
+        background: transparent;
 
         .icon {
             &:before {
@@ -261,11 +263,16 @@ p {
 
 @media (max-width: 1025px) {
     header {
-        display: none;
+        display: flex;
+        padding-left: 12px;
+        img{
+            height: 70px;
+            }
     }
 
     .header-logo {
-        display: none;
+        display: flex;
+        
     }
 
     .header-links {

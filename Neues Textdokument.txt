@@ -1,0 +1,38 @@
+<?php
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Konfigurieren Sie die SMTP-Server-Einstellungen
+$mail = new PHPMailer(true);
+$mail->SMTPDebug = 0;
+$mail->isSMTP();
+$mail->Host = 'smtp.ionos.de';
+$mail->SMTPAuth = true;
+$mail->Username = 'contact@icedropcoding.com';
+$mail->Password = 'Kulunki456Madnessinthehell1';
+$mail->SMTPSecure = 'TLS';
+$mail->Port = 465;
+
+// Setzen Sie den Empfänger, Betreff und Nachrichtentext
+$recipient = 'jansteindorf@googlemail.com';
+$subject = 'Portfolio Anfrage von ' . $_POST['name'];
+$message = 'Name: ' . $_POST['name'] . "\n" .
+    'E-Mail-Adresse: ' . $_POST['email'] . "\n" .
+    'Nachricht: ' . $_POST['message'];
+
+try {
+    // Senden Sie die E-Mail
+    $mail->setFrom($_POST['email'], $_POST['name']);
+    $mail->addAddress($recipient);
+    $mail->isHTML(false);
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+    $mail->send();
+    $res = 'E-Mail wurde gesendet';
+    echo json_encode(($res));
+} catch (Exception $e) {
+    $res = 'E-Mail konnte nicht gesendet werden: ';
+    echo json_encode(($res)), $mail->ErrorInfo;
+}

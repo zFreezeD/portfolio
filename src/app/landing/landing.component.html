@@ -1,24 +1,59 @@
 <div id="landing" class="main">
+
     <div class="main-left">
         <div class="main-left-container">
-            <img src="assets/img/landing-main.png">
-        </div>
+            <div class="main-left-bgball">
 
-    </div>
-    <div class="right-bg">
-
-    </div>
-    <div class="main-right">
-        <div class="main-right-container">
-            <div class="right-headtext">
-                <h1>I'm <span style="color: var(--color-primary)">Jan Steindorf</span>.<br>
-                    <span id="myJobs" style="color: var(--color-primary); white-space: nowrap;">Frontend Developer</span><span id="inputText">|</span>
-                    <br>based in Germany</h1>
             </div>
-            <div class="right-flowtext">
-                <p>Passionated in creating new things with ever-increasing skills. If you are searching for a competitive worker feel free to contact me!</p>
+            <div class="main-left-image-container">
+                <img src="assets/img/foto18c.png">
             </div>
         </div>
 
     </div>
+
+    <div class="main-middle">
+        <div class="main-middle-container">
+            <div class="middle-headtext">
+                <h1 class="computertext"><span class="uppertext">I'm <span class="header-color">Jan
+                            Steindorf</span></span>.<br>
+                    <span id="myJobs" class="header-color" style="white-space: nowrap;">Front End
+                        Developer</span><span id="inputText">|</span>
+                    <br><span class="bottomtext">based in Germany</span>
+                </h1>
+                <div class="mobiletext">
+                    <h2>
+                        Hello! I am Jan<br>
+
+                    </h2>
+                    <h1>
+                        FRONTEND<br> DEVELOPER
+                    </h1>
+                </div>
+
+            </div>
+
+            <div class="middle-bottom">
+                <div class="middle-bottom-scroll-container">
+                    <p>SCROLL</p>
+                    <div class="middle-bottom-line" [ngClass]="{'animation-started': startAnimation}"></div>
+                </div>
+                <div class="middle-bottom-links-container">
+                    <a href="https://www.linkedin.com/in/jan-steindorf-624681267/" target="_blank"><img
+                        src="assets/img/linked.png"></a>
+                    <a href="#contact"><img src="assets/img/mail.png"></a>
+                            <a href="https://github.com/zFreezeD" target="_blank"><img src="assets/img/git.png"></a>
+                </div>
+            </div>
+
+            <!--<div class="middle-flowtext">
+                <p>I am passionate about creating new things and constantly improving my skills. If you are looking for
+                    a competitive worker, please feel free to contact me!</p>
+            </div>-->
+
+        </div>
+
+    </div>
+
+
 </div>

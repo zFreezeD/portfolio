@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'footer', component: FooterComponent },
   { path: 'skillrotation', component: SkillrotationComponent },
-  { path: 'data-protection', component: DataProtectionComponent },
+  { path: 'data-protection/:id', component: DataProtectionComponent },
 ];
 
 @NgModule({

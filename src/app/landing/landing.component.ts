@@ -18,23 +18,30 @@ export class LandingComponent implements OnInit {
   isTimeout: boolean = false;
 
   myArray = [
-    "Frontend Developer",
+    "Front End Developer",
     "Game Programmer",
     "Unity Programmer",
     "Designer",
     "Gamer",
     "Friend",
     "Dreamer",
-    "Your Choice :)"
+    "Web Developer"
   ]
   id;
   constructor() {
 
   }
 
+  public startAnimation: boolean = false;
+
   ngOnInit(): void {
     this.changeText()
+    setTimeout(() => {
+      this.startAnimation = true;
+    }, 8000);
   }
+
+  
 
   changeText(): void {
     setTimeout(() => {

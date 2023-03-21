@@ -1,5 +1,6 @@
 .main {
     display: flex;
+    background-color: var(--color-primary2);
     height: 100vh;
     max-height: 100%;
     width: 100vw;
@@ -8,110 +9,238 @@
 }
 
 .main-left {
+    display: flex;
+    justify-content: start;
+    background-color: var(--color-primary2);
     z-index: 2;
-    width: 38.2vw;
     height: 100vh;
-    img {
-        object-fit: cover;
-        object-position: right;
-        z-index: 2;
-        width: 130.89%;
-        height: 70%;
-    }
-    animation: slideFromLeft .5s ease-in-out;
+
+    animation: slideFromLeft 0.5s ease-in-out;
 }
 
+.main-left-bgball {
+    position: absolute;
+    background-color: #ff003b47;
+    top: -27vh;
+    left: -27vh;
+    height: 100vh;
+    width: 100vh;
+    border-radius: 100%;
+}
 
+.image-bg-text {
+    opacity: 30%;
+    position: absolute;
+    left: 28%;
+    font-size: 2em;
+    color: var(--color-primary);
+    span {
+        /* Selects the second element of div siblings */
+        :nth-child(1) {
+            margin-left: 85%;
+        }
+
+        /* Selects the second li element in a list */
+        :nth-child(2) {
+            margin-left: -85%;
+            z-index: 99;
+        }
+
+        /* Selects every third element among any group of siblings */
+        :nth-child(3) {
+            margin-left: 85%;
+        }
+    }
+}
+
+.main-left-image-container {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    justify-content: left;
+    overflow: hidden;
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: end;
+    }
+}
 
 .main-left-container {
     padding-top: 144px;
-    height: 100%;
+    display: flex;
+    align-items: flex-end;
 }
 
-.right-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 61.8vw;
-    height: 100%;
-    background-color: var(--color-primary2);
-}
-
-.main-right {
+.main-middle {
+    display: flex;
     z-index: 3;
-    width: 61.8vw;
-    height: 100%;
+    width: 70vw;
     box-sizing: border-box;
-    animation: slideFromRight .5s ease-in-out;
+    animation: slideFromRight 0.5s ease-in-out;
 }
 
-.main-right-container {
+.main-middle-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
     z-index: 3;
-    margin-right: 72px;
-    margin-left: 12%;
-    height: 100%;
-    padding-top: 30vh;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+
+    h1 {
+        margin: 0;
+    }
 }
 
-.right-headtext {
-    font-size: var(--font-size-head2);
+.header-color{
+    color: var(--color-primary);
+}
+
+.middle-headtext {
+    font-size: var(--font-size-head1);
+    font-family: var(--);
     text-shadow: -5px 3px var(--color-primary2);
+    width: max-content;
+}
+.mobiletext{
+    display: none;
+    flex-flow: column;
+    h2{
+        font-size: var(--font-size-head2);
+        font-weight: 200;
+        margin: 0;
+    }
+    h1{
+        font-size: var(--font-size-head1);
+    }
 }
 
-.right-flowtext {
+.middle-flowtext {
     font-size: var(--font-size-flowtext);
 }
+
+.middle-bottom {
+    display: flex;
+    height: 40vh;
+    margin-top: 50px;
+    color: var(--color-primary);
+}
+
+.middle-bottom-scroll-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 70%;
+    
+}
+
+.middle-bottom-line {
+    background-color: var(--color-primary);
+    width: 3px;
+    height: 100%;
+    animation: pulse 5s infinite ease-in-out;
+    animation-play-state: paused;
+}
+
+.animation-started {
+    animation-play-state: running;
+  }
+
+.middle-bottom-links-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 30%;
+
+    a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@keyframes pulse {
+    0% {
+      height: 100%;
+    }
+    50% {
+      height: 80%;
+    }
+    100% {
+      height: 100%;
+    }
+    
+  }
+
 
 @media screen and (max-width: 1025px) {
     header {
         display: none;
     }
-    .main {
-        flex-flow: column;
-        height: 93vh;
-        img {
-            height: 100%;
-            width: 100%;
-            object-position: top;
-        }
+
+    .main{
+        flex-flow: column-reverse;
     }
 
-    .main-left {
+    .main-left{
+        height: 20vh;
+    }
+
+    .main-middle{
+        padding-left: 12px;
         width: 100vw;
-        height: 50vh;
     }
 
-    .main-left-container {
-        padding-top: 0;
+    .header-color{
+        color: white;
+        font-weight: bolder;
     }
 
-    .main-right {
-        width: 100vw;
-        height: 50vh;
-        max-height: 100%;
-        background-color: var(--color-primary2);
-        padding-bottom: 20px;
-        padding-top: 20px;
-
-        h1 {
-            margin: 0;
-        }
-
-        p {
-            margin: 0;
-        }
-    }
-
-    .main-right-container {
-        padding: 0;
-        padding-right: 20px;
-        padding-left: 20px;
-        margin: 0;
-    }
-
-    .right-bg {
+    .computertext{
         display: none;
     }
+
+    .mobiletext{
+        display: flex;
+    }
+
+    .main-left-bgball {
+        position: absolute;
+        background-color: #581129;
+        height: 130vw;
+        width: 130vw;
+        top: -5vw;
+        left: -40vw;
+        border-radius: 100%;
+    }
+    .middle-headtext {
+        font-weight: normal;
+        text-shadow: none;
+        width: max-content;
+    }
+
+    .middle-bottom{
+        height: 32vh;
+    }
+
+    .main-left-image-container{
+        height: 60vh;
+    }
+
+    .middle-bottom-scroll-container{
+        display: none;
+    }
+
+    .middle-bottom-links-container{
+        display: none;
+    }
+
+    
+
 }
 
 @keyframes slideFromLeft {
@@ -119,7 +248,7 @@
         transform: translate(-485px);
         opacity: 0;
     }
-    to{
+    to {
         transform: translate(0px);
         opacity: 1;
     }
@@ -130,7 +259,7 @@
         transform: translate(+485px);
         opacity: 0;
     }
-    to{
+    to {
         transform: translate(0px);
         opacity: 1;
     }

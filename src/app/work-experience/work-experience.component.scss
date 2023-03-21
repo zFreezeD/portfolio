@@ -78,6 +78,10 @@
     white-space: nowrap;
 }
 
+h3 span:hover{
+    color: var(--color-primary);
+}
+
 @media screen and (max-height: 760px) {
     .main {
         height: fit-content !important;

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +15,8 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillrotationComponent } from './skillrotation/skillrotation.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
-
+import { PokedexShowcaseComponent } from './pokedex-showcase/pokedex-showcase.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,10 +31,16 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
     FooterComponent,
     SkillrotationComponent,
     DataProtectionComponent,
+    PokedexShowcaseComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'crisis-list', component: DataProtectionComponent}
+    ]),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

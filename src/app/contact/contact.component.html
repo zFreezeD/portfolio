@@ -1,4 +1,4 @@
-<div id="contact" class="main" data-aos="zoom-in" data-aos-duration="750">
+<!-- <div #submit id="contact" class="main" data-aos="zoom-in" data-aos-duration="750">
     <h2 data-aos="zoom-in" data-aos-duration="2750">Get in touch</h2>
     <p class="main-flowtext">Want to know more, or you are yet interessted to work with me? Contact me!<br>Use this
         formula or send me an E-Mail to <a href="mailto:jan2910@hotmail.de?subject=Working together&body=Message">jan2910@hotmail.de</a></p>
@@ -18,6 +18,50 @@
         <div class="main-submit-container">
             <div class="wrapper">
                 <button type="submit"><span>Submit</span></button>
+            </div>
+        </div>
+
+    </form>
+
+</div> -->
+
+<div id="contact" class="main">
+    <form #contactForm ngNativeValidate (ngSubmit)="onSubmit()">
+        <h2 data-aos="zoom-in" data-aos-duration="2750">Get in touch</h2>
+        <p class="main-flowtext">Want to know more, or you are yet interessted to work with me? Contact me! <br> Use
+            this
+            formula, use <a href="https://www.linkedin.com/in/jan-steindorf-624681267/" target="_blank"> LinkedIn </a>
+            or send me an E-Mail to <a
+                href="mailto:jansteindorf@googlemail.com?subject=Working together&body=Message">jansteindorf@googlemail.com</a>
+        </p>
+        <label for="name">Name:</label>
+        <input #nameField class="main-input" type="text" placeholder="Max Mustermann" id="name" name="name"
+            [(ngModel)]="name" required><br>
+
+        <label for="email">E-Mail:</label>
+        <input #mailField class="main-input" type="email" placeholder="yourname@mail.com" id="email" name="email"
+            [(ngModel)]="email" required><br>
+
+        <label for="message">Message:</label>
+        <textarea #messageField class="main-textarea" placeholder="Dear Mr. Steindorf,
+
+I recently visited your website and was impressed with what I saw. 
+The quality of your products/services and the professionalism of your website really caught my attention.
+        
+Could you please provide me with additional information and let me know how I can get with you?
+        
+Best regards,
+(Company + Name)" id="message" name="message" [(ngModel)]="message" required></textarea><br>
+
+        <div class="main-submit-container">
+            <div class="wrapper">
+                <button #submitBtn type="submit"><span>Submit</span>
+                    <div class="loader-container">
+                        <div #loading class="loader-5 center d-none"><span></span></div>
+                    </div>
+                </button>
+                <!-- Loader 5 -->
+
             </div>
         </div>
 

@@ -60,7 +60,7 @@ export class MyProjectsComponent implements OnInit {
   }
 
   exit() {
-    console.log("Exit");
+   
   }
 
 
@@ -118,9 +118,5 @@ export class MyProjectsComponent implements OnInit {
       this.btn4Active = true;
     else if (int == 5)
       this.btn5Active = true;
-  }
-
-  wip() {
-    alert("work in progress. Images or Links could not be working. Fixed soon!")
   }
 }
